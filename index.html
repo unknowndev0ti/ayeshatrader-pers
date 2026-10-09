@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Trading Signals By Ayesha</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #050b14;
+      background-image: linear-gradient(rgba(5, 11, 20, 0.85), rgba(5, 11, 20, 0.95)), url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2070&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Nexora Custom Ambient Glows */
+    .glow-orb-primary {
+      background: radial-gradient(circle, rgba(0, 229, 255, 0.12) 0%, rgba(0,0,0,0) 65%);
+    }
+    .glow-orb-secondary {
+      background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, rgba(0,0,0,0) 65%);
+    }
+
+    /* Frosted Glass Effect */
+    .nexora-glass {
+      background: rgba(13, 19, 33, 0.65);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    }
+    .nexora-glass:hover {
+      border-color: rgba(0, 229, 255, 0.25);
+      transform: translateY(-2px);
+    }
+
+    /* Seamless Ticker */
+    @keyframes scroll-ticker {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ticker-wrapper {
+      display: flex;
+      width: 200%;
+      animation: scroll-ticker 25s linear infinite;
+    }
+
+    /* CTA Button Gradient */
+    .btn-gradient {
+      background: linear-gradient(135deg, #00E5FF 0%, #0088FF 100%);
+      box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+    .btn-gradient:hover {
+      box-shadow: 0 6px 25px rgba(0, 229, 255, 0.5);
+      transform: scale(1.02);
+    }
+
+    /* WhatsApp Button Gradient Override */
+    .whatsapp-gradient {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+    }
+    .whatsapp-gradient:hover {
+      box-shadow: 0 6px 25px rgba(37, 211, 102, 0.5);
+      transform: scale(1.02);
+    }
+
+    /* META-SAFE ANIMATION 1: Subtle Button Shine */
+    @keyframes shine {
+      0% { left: -100%; }
+      20% { left: 100%; }
+      100% { left: 100%; }
+    }
+    .btn-shine {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-shine::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+      transform: skewX(-25deg);
+      animation: shine 4s infinite;
+    }
+
+    /* META-SAFE ANIMATION 2: Subtle Element Float */
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    .animate-float {
+      animation: float 5s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body class="min-h-screen pb-12 selection:bg-[#00E5FF] selection:text-black">
+
+  <!-- BACKGROUND GLOWS -->
+  <div class="fixed top-[-10%] left-[-10%] w-[700px] h-[700px] glow-orb-secondary pointer-events-none -z-10 rounded-full"></div>
+  <div class="fixed bottom-[-10%] right-[-10%] w-[600px] h-[600px] glow-orb-primary pointer-events-none -z-10 rounded-full"></div>
+
+  <!-- LIVE MARKET TICKER HEADER -->
+  <header class="bg-[#030712]/80 border-b border-slate-800/50 py-3 sticky top-0 z-50 backdrop-blur-xl">
+    <div class="max-w-4xl mx-auto px-4 flex items-center gap-4">
+      <div class="flex items-center gap-2 bg-[#00E5FF]/10 text-[#00E5FF] font-mono font-bold text-[10px] sm:text-xs px-3 py-1.5 rounded-md border border-[#00E5FF]/20 shrink-0 uppercase tracking-wide">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00E5FF] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-[#00E5FF]"></span>
+        </span>
+        MARKET PULSE
+      </div>
+      <div class="overflow-hidden w-full relative">
+        <div class="ticker-wrapper text-slate-300 font-mono text-[11px] sm:text-xs space-x-8 whitespace-nowrap">
+          <span>XAU/USD <span data-pair="XAUUSD" class="text-[#00E5FF]">Syncing...</span></span>
+          <span>BTC/USD <span data-pair="BTCUSD" class="text-[#00E5FF]">Syncing...</span></span>
+          <span>EUR/USD <span data-pair="EURUSD" class="text-[#00E5FF]">Syncing...</span></span>
+          <span>GBP/USD <span data-pair="GBPUSD" class="text-[#00E5FF]">Syncing...</span></span>
+          
+          <!-- Duplicated for infinite loop -->
+          <span>XAU/USD <span data-pair="XAUUSD" class="text-[#00E5FF]">Syncing...</span></span>
+          <span>BTC/USD <span data-pair="BTCUSD" class="text-[#00E5FF]">Syncing...</span></span>
+          <span>EUR/USD <span data-pair="EURUSD" class="text-[#00E5FF]">Syncing...</span></span>
+          <span>GBP/USD <span data-pair="GBPUSD" class="text-[#00E5FF]">Syncing...</span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-md sm:max-w-xl lg:max-w-4xl mx-auto px-4 pt-12 space-y-12">
+
+    <!-- HERO SECTION -->
+    <section class="nexora-glass rounded-[2rem] p-8 sm:p-10 text-center relative overflow-hidden">
+      
+      <!-- LOGO DISPLAY -->
+      <div class="animate-float relative w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-6 rounded-2xl bg-[#080d1a]/80 p-1.5 border border-[#00E5FF]/30 shadow-[0_0_25px_rgba(0,229,255,0.15)] backdrop-blur-md group hover:border-[#00E5FF]/60 transition-all duration-300">
+        <img 
+          src="fatehforex.jpeg" 
+          alt="AYESHA TRADER" 
+          class="w-full h-full object-cover rounded-xl"
+          onerror="this.onerror=null; this.src='https://via.placeholder.com/150/00E5FF/050b14?text=LOGO';"
+        />
+        <!-- Verified Checkmark Badge -->
+        <span class="absolute -bottom-2 -right-2 bg-[#00E5FF] text-black p-1.5 rounded-full leading-none shadow-lg border-2 border-[#050b14]">
+          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
+        </span>
+      </div>
+
+      <!-- Top Badge -->
+      <div class="inline-flex items-center gap-2 bg-indigo-500/10 border border-indigo-500/20 px-4 py-1.5 rounded-full text-xs text-indigo-400 font-semibold mb-6 tracking-wide uppercase">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+        Trading Community Network
+      </div>
+
+      <!-- Headline -->
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight mb-4 drop-shadow-lg">
+        AYESHA <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00E5FF] to-[#0088FF]">TRADER</span>
+      </h1>
+
+      <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto mb-4 leading-relaxed">
+        Master new digital skills & trade newly listed crypto coins like a pro.
+      </p>
+      
+      <p class="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto leading-relaxed mb-8">
+        For instant work updates, <a href="https://wa.me/923354131689?text=I%20have%20a%20Binance%20account%20and%20have%20some%20dollars%20available%20in%20my%20account." target="_blank" class="text-white font-bold underline decoration-[#00E5FF]">contact us on WhatsApp</a>
+      </p>
+
+      <!-- FIRST WHATSAPP CTA BUTTON -->
+      <a 
+        href="https://wa.me/923354131689?text=I%20have%20a%20Binance%20account%20and%20have%20some%20dollars%20available%20in%20my%20account."
+        target="_blank" 
+        class="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-3 whatsapp-gradient text-white font-bold text-sm sm:text-lg uppercase tracking-wider py-4 px-10 rounded-xl"
+      >
+        <span>Contact Us On WhatsApp</span>
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.124-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+      </a>
+
+      <!-- Value Prop Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
+        <div class="bg-[#080d1a]/80 border border-slate-700/50 rounded-xl p-5 text-left flex flex-col items-start gap-3 backdrop-blur-md">
+          <div class="bg-[#00E5FF]/20 p-2.5 rounded-lg text-[#00E5FF]">🎯</div>
+          <div>
+            <h4 class="text-white text-sm font-bold">New Coin Listing</h4>
+            <p class="text-[12px] text-slate-400 mt-1 leading-relaxed">Early insights on newly listed tokens.</p>
+          </div>
+        </div>
+        <div class="bg-[#080d1a]/80 border border-slate-700/50 rounded-xl p-5 text-left flex flex-col items-start gap-3 backdrop-blur-md">
+          <div class="bg-indigo-500/20 p-2.5 rounded-lg text-indigo-400">📊</div>
+          <div>
+            <h4 class="text-white text-sm font-bold">Web3 Earnings</h4>
+            <p class="text-[12px] text-slate-400 mt-1 leading-relaxed">Strategies to maximize your portfolio.</p>
+          </div>
+        </div>
+        <div class="bg-[#080d1a]/80 border border-slate-700/50 rounded-xl p-5 text-left flex flex-col items-start gap-3 backdrop-blur-md">
+          <div class="bg-emerald-500/20 p-2.5 rounded-lg text-emerald-400">🛡️</div>
+          <div>
+            <h4 class="text-white text-sm font-bold">Risk Management</h4>
+            <p class="text-[12px] text-slate-400 mt-1 leading-relaxed">Learn to protect your trading capital.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECOND CTA SECTION -->
+    <section class="text-center py-6">
+      <h3 class="text-xl sm:text-2xl font-bold text-white mb-6">Ready to start earning on Binance Web3?</h3>
+      <!-- SECOND WHATSAPP CTA BUTTON -->
+      <a 
+        href="https://wa.me/923354131689?text=%20I%20want%20to%20earn%20money%20from%20Web3%20trading%20on%20newly%20listed%20coins." 
+        target="_blank" 
+        class="btn-shine w-full sm:w-auto inline-flex items-center justify-center gap-3 whatsapp-gradient text-white font-bold text-sm sm:text-lg uppercase tracking-wider py-4 px-10 rounded-xl"
+      >
+        <span>Contact Us On WhatsApp</span>
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+          <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.124-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="max-w-4xl mx-auto px-4 pt-10 pb-8 text-center space-y-6 relative z-10">
+    <!-- LEGAL LINKS -->
+    <div class="flex flex-wrap justify-center gap-4 text-xs text-slate-500 font-medium">
+      <a href="privacy.html" class="hover:text-[#00E5FF] transition-colors bg-[#050b14]/50 px-2 py-1 rounded">Privacy Policy</a>
+      <span class="py-1">|</span>
+      <a href="terms.html" class="hover:text-[#00E5FF] transition-colors bg-[#050b14]/50 px-2 py-1 rounded">Terms of Service</a>
+      <span class="py-1">|</span>
+      <a href="disclaimer.html" class="hover:text-[#00E5FF] transition-colors bg-[#050b14]/50 px-2 py-1 rounded">Disclaimer</a>
+    </div>
+
+    <!-- DISCLAIMERS -->
+    <div class="max-w-2xl mx-auto space-y-3 bg-[#050b14]/60 p-4 rounded-xl backdrop-blur-sm">
+      <p class="text-[10px] text-slate-400 leading-relaxed">
+        This site is not a part of the Facebook website or Meta Platforms, Inc. Additionally, this site is NOT endorsed by Facebook in any way. FACEBOOK is a trademark of META PLATFORMS, Inc.
+      </p>
+      <p class="text-[10px] text-slate-400 leading-relaxed">
+        <strong class="text-slate-300">Risk Disclosure:</strong> All content shared is strictly for educational purposes and should not be construed as financial advice. Trading foreign exchange, cryptocurrencies, and commodities carries a high level of risk and may not be suitable for all investors. Past performance is not indicative of future results.
+      </p>
+    </div>
+  </footer>
+
+  <!-- REAL-TIME PRICE SCRIPT -->
+  <script>
+    async function updateMarketData() {
+      try {
+        const cryptoRes = await fetch('https://api.binance.com/api/v3/ticker/24hr?symbols=["BTCUSDT","PAXGUSDT"]');
+        const cryptoData = await cryptoRes.json();
+        const forexRes = await fetch('https://open.er-api.com/v6/latest/USD');
+        const forexData = await forexRes.json();
+
+        if (cryptoData && forexData && forexData.rates) {
+          const btc = cryptoData.find(item => item.symbol === 'BTCUSDT');
+          const gold = cryptoData.find(item => item.symbol === 'PAXGUSDT');
+          const rates = {
+            BTCUSD: {
+              price: parseFloat(btc.lastPrice).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+              change: parseFloat(btc.priceChangePercent).toFixed(2)
+            },
+            XAUUSD: {
+              price: parseFloat(gold.lastPrice).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+              change: parseFloat(gold.priceChangePercent).toFixed(2)
+            },
+            EURUSD: {
+              price: (1 / forexData.rates.EUR).toFixed(4),
+              change: "+0.12" 
+            },
+            GBPUSD: {
+              price: (1 / forexData.rates.GBP).toFixed(4),
+              change: "-0.05" 
+            }
+          };
+
+          Object.keys(rates).forEach(symbol => {
+            const elements = document.querySelectorAll(`[data-pair="${symbol}"]`);
+            const item = rates[symbol];
+            const isPositive = !item.change.startsWith('-');
+            const colorClass = isPositive ? 'text-[#00E5FF]' : 'text-rose-500';
+            const arrow = isPositive ? '↑' : '↓';
+
+            elements.forEach(el => {
+              el.className = `${colorClass} font-semibold ml-1`;
+              el.innerHTML = `${item.price} ${arrow} ${Math.abs(item.change)}%`;
+            });
+          });
+        }
+      } catch (err) {
+        console.error("Market data sync error:", err);
+      }
+    }
+    updateMarketData();
+    setInterval(updateMarketData, 10000);
+  </script>
+
+</body>
+</html>
